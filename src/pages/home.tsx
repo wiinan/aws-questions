@@ -9,7 +9,6 @@ import { DoneQuestionCard } from "./done-question-card";
 
 export function HomePage() {
   const { state } = useHome();
-  console.log(state)
 
   return (
     <>

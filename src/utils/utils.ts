@@ -59,7 +59,10 @@ export function hasAnsweredCorrectly(
   currentQuestion: questionOptionsDto
 ): boolean {
   if (typeof selectedQuestion === "string") {
-    return !!currentQuestion.isCorrect;
+    const selectedOption = currentQuestion.options[
+      selectedQuestion
+    ] as questionDataDto;
+    return !!selectedOption.correct;
   }
 
   return selectedQuestion.every((questionIndex) => {

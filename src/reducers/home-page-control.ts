@@ -92,7 +92,13 @@ function mountQuestions(exam: typeof AwsCloudPractitioner) {
   const TOTAL_QUESTIONS = exam.questions.length;
   let questions = exam.questions;
 
-  const mountedQuestions = getArrayLengthByNumber(TOTAL_QUESTIONS).map(() => {
+  const mountedQuestions: questionOptionsDto[] = [];
+
+  getArrayLengthByNumber(TOTAL_QUESTIONS).forEach((_, index) => {
+    if (index >= 65) {
+      return;
+    }
+
     const totalQuestions = questions.length;
     const questionIndex = randomIntFromInterval(0, totalQuestions - 1);
     const currentQuestion = questions[questionIndex];
@@ -104,7 +110,7 @@ function mountQuestions(exam: typeof AwsCloudPractitioner) {
     questions = questions.filter(
       (question) => question.id !== currentQuestion.id
     );
-    return mountQuestion(currentQuestion);
+    mountedQuestions.push(mountQuestion(currentQuestion));
   });
 
   return {
@@ -120,7 +126,7 @@ function updateQuestions(
   questionOptions: ChangePageControlActionPayloadDto
 ): updateQuestionsDto {
   if (
-    questionOptions.currentQuestion.isMultiple ||
+    questionOptions?.currentQuestion?.isMultiple ||
     !questionOptions.currentIndex ||
     !questionOptions.selectedQuestion ||
     !options.questions
@@ -160,9 +166,9 @@ function updateMultipleQuestions(
   questionOptions: ChangePageControlActionPayloadDto
 ): updateQuestionsDto {
   if (
-    !questionOptions.currentQuestion.isMultiple ||
-    !questionOptions.currentIndex ||
-    !questionOptions.selectedQuestion?.length ||
+    !questionOptions?.currentQuestion?.isMultiple ||
+    !questionOptions?.currentIndex ||
+    !questionOptions?.selectedQuestion?.length ||
     !options.questions
   ) {
     return {};

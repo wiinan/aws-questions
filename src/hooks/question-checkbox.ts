@@ -22,7 +22,6 @@ export function useQuestionCheckbox({
 
   const setSelectedCheckboxQuestion = (isChecked: CheckedState, id: string) => {
     setSelectedQuestion((prevState) => {
-      console.log(prevState);
       if (typeof prevState !== "object") {
         return;
       }

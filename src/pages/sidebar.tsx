@@ -18,7 +18,7 @@ export function SidebarComponent({
     useSidebarComponent(setSelectedQuestion);
 
   return (
-    <Sidebar collapsible="none">
+    <Sidebar collapsible="none" className="sidebar__height">
       <SidebarContent>
         <SidebarMenu>
           {questions?.map((question, index) => (
@@ -32,7 +32,7 @@ export function SidebarComponent({
               key={index}
             >
               <SidebarMenuButton asChild>
-                <span className="cursor-pointer">{question.question}</span>
+                <span className="cursor-pointer h-full">{question.question}</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}

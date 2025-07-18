@@ -6,8 +6,8 @@ export function useDoneQuestionCard(options: ChangePageControlStateDto) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { dispatch } = useHomePageControlContext() as any;
 
-  const totalCorrectQuestion = options.correct ? options.correct / 2 : 0;
-  const totalIncorrectQuestion = options.incorrect ? options.incorrect / 2 : 0;
+  const totalCorrectQuestion = options.correct ? options.correct : 0;
+  const totalIncorrectQuestion = options.incorrect ? options.incorrect : 0;
   const percentage =
     (totalCorrectQuestion / (options.questions?.length || 0)) * 100;
 
