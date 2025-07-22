@@ -1299,7 +1299,7 @@
           "question": "Estruturar a empresa para apoiar os resultados de negócios."
         },
         "c": { "question": "Executar operações como código." },
-        "d": { "question": "", "correct": true }
+        "d": { "question": "" }
       }
     },
     {
@@ -1868,7 +1868,7 @@
       "question": "Qual serviço ou recurso da AWS é um exemplo de um sistema de gerenciamento de banco de dados relacional?",
       "isMultiple": false,
       "options": {
-        "a": { "question": "", "correct": true },
+        "a": { "question": "" },
         "b": { "question": "Amazon Athena" },
         "c": { "question": "Amazon S3 Select" },
         "d": { "question": "Amazon Redshift", "correct": true }
@@ -2353,24 +2353,6 @@
       }
     },
     {
-      "id": 145,
-      "question": "Uma empresa simula fluxos de trabalho para revisar e validar que todos os processos são eficazes e que a equipe está familiarizada com os processos. Qual princípio de design do AWS Well-Architected Framework a empresa está seguindo com essa prática?",
-      "isMultiple": false,
-      "options": {
-        "a": {
-          "question": "Estruturar a empresa para apoiar os resultados de negócios."
-        },
-        "b": { "question": "Executar operações como código." },
-        "c": {
-          "question": "Refinar procedimentos operacionais frequentemente.",
-          "correct": true
-        },
-        "d": {
-          "question": "Fazer mudanças frequentes, pequenas e reversíveis."
-        }
-      }
-    },
-    {
       "id": 146,
       "question": "Uma empresa está coletando padrões de comportamento dos usuários para identificar como atingir metas de impacto sustentável. Quais diretrizes são melhores práticas para a empresa implementar para atingir essas metas? (Selecione DUAS.)",
       "isMultiple": true,
@@ -2614,7 +2596,7 @@
     {
       "id": 163,
       "question": "Quais serviços da AWS podem limitar erros manuais provisionando consistentemente recursos da AWS em múltiplos ambientes?",
-      "isMultiple": false,
+      "isMultiple": true,
       "options": {
         "a": { "question": "AWS CodeBuild" },
         "b": { "question": "AWS CloudFormation", "correct": true },
@@ -2659,7 +2641,7 @@
       "options": {
         "a": { "question": "Adotar um modelo de consumo." },
         "b": { "question": "Desacoplar os componentes.", "correct": true },
-        "c": { "question": "", "correct": true },
+        "c": { "question": "" },
         "d": { "question": "Maximizar a utilização." }
       }
     },
@@ -3578,7 +3560,7 @@
           "question": "Todas as Zonas de Disponibilidade em uma Região da AWS são interconectadas com uma rede de alta largura de banda e baixa latência.",
           "correct": true
         },
-        "d": { "question": "", "correct": true },
+        "d": { "question": "" },
         "e": {
           "question": "Zonas de Disponibilidade dentro de uma região da AWS compartilham energia redundante, rede e conectividade."
         }

@@ -1,7 +1,8 @@
 import { questionDataDto, questionOptionsDto } from "@/dtos/home-page";
+import { faker } from "@faker-js/faker";
 
 export function randomIntFromInterval(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  return faker.number.int({ min, max })
 }
 
 export function getArrayLengthByNumber(int: number) {
