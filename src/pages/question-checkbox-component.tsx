@@ -10,8 +10,8 @@ export function QuestionCheckboxComponent(
 
   return (
     <div className="col-span-2">
-      <Label className="font-semibold">
-        {options.currentQuestion?.question}
+      <Label className="font-semibold text-xl">
+        {options.currentIndex + 1} - {options.currentQuestion?.question}
       </Label>
       <div className="flex h-full items-center">
         <div>

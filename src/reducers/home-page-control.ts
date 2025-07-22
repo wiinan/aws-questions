@@ -4,6 +4,7 @@ import {
   INDEX_BY_QUESTIONS,
   QUESTION_BY_INDEX,
   QUESTION_REDUCERS,
+  TOTAL_EXAM_QUESTIONS,
 } from "@/constants/questions";
 import {
   ChangePageControlActionDto,
@@ -95,7 +96,7 @@ function mountQuestions(exam: typeof AwsCloudPractitioner) {
   const mountedQuestions: questionOptionsDto[] = [];
 
   getArrayLengthByNumber(TOTAL_QUESTIONS).forEach((_, index) => {
-    if (index >= 65) {
+    if (index >= TOTAL_EXAM_QUESTIONS) {
       return;
     }
 

@@ -45,9 +45,10 @@ export type ChangePageControlStateDto = {
 } & updateQuestionsDto;
 
 export type questionComponentOptionsDto = {
-  currentQuestion?: questionOptionsDto,
-  selectedQuestion: string | undefined,
-  setSelectedQuestion: Dispatch<SetStateAction<string | string[] | undefined>>;,
+  currentQuestion?: questionOptionsDto;
+  selectedQuestion: string | undefined;
+  setSelectedQuestion: Dispatch<SetStateAction<string | string[] | undefined>>;
+  currentIndex: number;
 };
 
 export type SidemenuDto = {

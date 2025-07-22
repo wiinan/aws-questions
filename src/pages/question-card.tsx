@@ -42,12 +42,14 @@ export function QuestionCard(options: ChangePageControlStateDto) {
               currentQuestion={options.currentQuestion}
               setSelectedQuestion={setSelectedQuestion}
               selectedQuestion={selectedQuestion}
+              currentIndex={options.currentIndex}
             />
           ) : (
             <QuestionRadioComponent
               currentQuestion={options.currentQuestion}
               setSelectedQuestion={setSelectedQuestion}
               selectedQuestion={selectedQuestion}
+              currentIndex={options.currentIndex}
             />
           )}
         </CardContent>

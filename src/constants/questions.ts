@@ -20,3 +20,5 @@ export const INDEX_BY_QUESTIONS = {
   d: 4,
   e: 5,
 };
+
+export const TOTAL_EXAM_QUESTIONS = 20;

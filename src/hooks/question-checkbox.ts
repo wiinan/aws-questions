@@ -15,7 +15,7 @@ export function useQuestionCheckbox({
   );
 
   useEffect(() => {
-    if (!selectedQuestion) {
+    if (!selectedQuestion?.length) {
       setSelectedQuestion(selectedQuestionsIndex);
     }
   }, []);

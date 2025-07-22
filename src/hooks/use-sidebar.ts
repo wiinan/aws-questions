@@ -1,3 +1,5 @@
+"use client";
+
 import { QUESTION_REDUCERS } from "@/constants/questions";
 import { useHomePageControlContext } from "@/contexts/home-control";
 import { questionOptionsDto } from "@/dtos/home-page";

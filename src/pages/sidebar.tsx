@@ -32,7 +32,9 @@ export function SidebarComponent({
               key={index}
             >
               <SidebarMenuButton asChild>
-                <span className="cursor-pointer h-full">{question.question}</span>
+                <span className="cursor-pointer h-full">
+                  {question.question}
+                </span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
